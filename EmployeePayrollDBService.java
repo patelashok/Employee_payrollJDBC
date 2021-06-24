@@ -34,9 +34,9 @@ public class EmployeePayrollDBService {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
-                double basic_pay = resultSet.getDouble("basic_pay");
+                double salary = resultSet.getDouble("basic_pay");
                 LocalDate startDate = resultSet.getDate("start").toLocalDate();
-                employeePayrollList.add(new EmpPayRollData(id, name, basic_pay, startDate));
+                employeePayrollList.add(new EmpPayRollData(id, name, salary, startDate));
             }
         } catch (SQLException e) {
             e.printStackTrace();
